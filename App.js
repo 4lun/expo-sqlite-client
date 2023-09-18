@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
+
+if (Platform.OS === 'web') {
+  import('./setup-sqlite-web');
+}
 
 export default function App() {
   return (
